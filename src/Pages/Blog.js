@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { React, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import CodeBlock from "../../utils/CodeBlock"
+import CodeBlock from "../utils/CodeBlock";
 import { useLocation } from "react-router-dom";
 
 function Blog(props) {
@@ -14,14 +13,12 @@ function Blog(props) {
   _ italic _
 
   ** bold **
-
-  <b> bold Html </b>
   `;
   useEffect(() => {});
   return (
     <div>
       <h1>{location}</h1>
-      <ReactMarkdown plugins={[gfm]} renderers={{ code: CodeBlock }} />
+      <ReactMarkdown source={markdown} renderers={{ code: CodeBlock }} />
       <h2>subtitle</h2>
     </div>
   );
