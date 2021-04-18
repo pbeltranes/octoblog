@@ -1,8 +1,11 @@
 import Paul from "./paul.svg";
+import Mario from "./tenor.gif";
 import "./App.css";
 import PreviewCard from "../Components/PreviewCard";
-
+// script.js
+import "nes.css/css/nes.min.css";
 import { Typography, Paper, Grid } from "@material-ui/core";
+
 
 function App() {
   const listArticles = [
@@ -53,11 +56,9 @@ function App() {
       </header>
       <body>
         <Typography variant="h3" component="h2">
-          @Pbeltranes
+          @Pbeltranes  <img src={Mario} className="Mario" alt="logo" />
         </Typography>
-        <Typography variant="h4" component="h2">
-          Paul Beltrán Espinosa
-        </Typography>
+       
         <Grid
           container
           direction="row"
@@ -67,7 +68,7 @@ function App() {
         >
           <Grid item xs>
             <Paper elevation={0}>
-              <Typography variant="body2" component="h2">
+              <Typography className="nes-container" variant="body2" component="h2">
                 Español: Ingeniero de la UDP y Desarrollador Fullstack Nodejs en
                 la práctica. Me gusta el desarrollo de software (más el Back que
                 Front). Participe en la fundación de dos emprendimientos y una
@@ -79,7 +80,7 @@ function App() {
             </Paper>
           </Grid>
           <Grid item xs>
-            <Paper elevation={0}>
+            <Paper className="nes-container" elevation={0}>
               <Typography variant="body2" component="h2">
                 English: Engineer of UDP and developer Fullstack Node in the
                 practice, I like develop software (more that the Back than the

@@ -6,6 +6,16 @@
   height: 40vmin;
   pointer-events: none;
 }
+.Mario {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+.Mario-Space {
+  position: absolute;
+  left:60px;
+  animation:slide 5s;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

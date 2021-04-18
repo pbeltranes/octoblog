@@ -10,6 +10,8 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import Button from "@material-ui/core/Button";
 import { Link } from "react-router-dom";
+
+import "nes.css/css/nes.min.css";
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -66,7 +68,7 @@ export default function PreviewCard(props) {
           <IconButton aria-label="share">
             <ShareIcon />
           </IconButton>
-          <Button size="small" color="primary" component={Link} to={`/blog/${content.path}`}>
+          <Button className="nes-btn" size="small" color="primary" component={Link} to={`/blog/${content.path}`}>
               Learn More
           </Button>
         </CardActions>
