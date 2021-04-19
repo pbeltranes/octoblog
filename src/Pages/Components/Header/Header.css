@@ -1,0 +1,9 @@
+.navDisplayFlex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .linkText {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+  }

@@ -3,23 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./Pages/App";
 import Blog from "./Pages/Blog";
+import About from "./Pages/About/About";
 import NotFound from "./Pages/NotFound";
 import reportWebVitals from "./reportWebVitals";
-import { MuiThemeProvider, createMuiTheme  } from "@material-ui/core/styles";
-import { CssBaseline } from "@material-ui/core"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { CssBaseline } from "@material-ui/core";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import PressStart2P from "./fonts/PressStart2P-Regular.ttf";
 
 const pressStart2P = {
-  fontFamily: 'Press Start 2P',
+  fontFamily: "Press Start 2P",
   fontStyle: "normal",
   fontDisplay: "swap",
   fontWeight: 400,
@@ -34,8 +28,22 @@ const pressStart2P = {
 };
 
 const THEME = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#986ee7',
+      main: '#6541b4',
+      dark: '#311683',
+      contrastText: '#f6f3f4',
+    },
+    secondary: {
+      light: '#6fffff',
+      main: '#00f5f5',
+      dark: '#00c1c2',
+      contrastText: '#171213',
+    },
+  },
   typography: {
-    fontFamily: 'Press Start 2P' 
+    fontFamily: "Press Start 2P",
   },
   overrides: {
     MuiCssBaseline: {
@@ -57,6 +65,9 @@ ReactDOM.render(
           </Route>
           <Route path="/blog/:id">
             <Blog />
+          </Route>
+          <Route exact path="/about-me">
+            <About />
           </Route>
           <Route path="*">
             <NotFound />

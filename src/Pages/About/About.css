@@ -1,0 +1,18 @@
+.head-render {
+    image-rendering: pixelated;
+    height: 40vmin;
+    margin: 0% 5%;
+}
+
+.margin-ballon {
+    margin: 1% 10% !important;
+    border-image-repeat: stretch  !important;
+}
+.ballon-border {
+    border-image-repeat: stretch  !important;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .head-render {
+      animation: App-logo-spin infinite 10s linear;
+    }
+  }
